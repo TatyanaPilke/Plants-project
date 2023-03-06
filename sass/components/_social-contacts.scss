@@ -1,0 +1,20 @@
+.socials-contacts {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  
+  &__link {
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: filter 0.4s;
+
+    &:hover {
+      filter: invert(46%) sepia(99%) saturate(1381%) hue-rotate(342deg) brightness(93%) contrast(88%);
+    }
+  }
+}

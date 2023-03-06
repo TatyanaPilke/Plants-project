@@ -1,0 +1,91 @@
+.service {
+  padding-top: 60px;
+  background-clip: content-box;
+  margin-top: -60px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+
+    @include media-desktop {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    width: 306px;
+    margin-right: 142px;
+
+    @include media-laptop {
+      margin-right: 30px;
+      width: 270px;
+    }
+
+    @include media-desktop {
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    padding: 10px 40px;
+    min-width: 160px;
+    border-radius: 5px;
+    font-family: 'Inika', serif;
+
+    &--selected {
+      color: $light;
+      background-color: $aсcent-title-color;
+    }
+
+    &--bordered {
+      border: 1px solid $aсcent-title-color;
+      color: $aсcent-title-color;
+    }
+
+    &:not(:last-child) {
+      margin-right: 38px;
+
+      @include media-tablet {
+        margin-right: 25px;
+        margin-bottom: 9px;
+      }
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 55px;
+    column-gap: 112px;
+    padding-bottom: 121px;
+
+    @include media-laptop {
+      row-gap: 38px;
+      column-gap: 50px;
+    }
+
+    @include media-desktop {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 106px;
+      padding-bottom: 70px;
+    }
+
+    @include media-tablet {
+      column-gap: 30px;
+    }
+
+    @include media-mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}

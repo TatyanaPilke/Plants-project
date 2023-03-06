@@ -1,0 +1,13 @@
+.container {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include media-desktop {
+    padding: 0 50px;
+  }
+
+  @include media-mobile {
+    padding: 0 25px;
+  }
+}

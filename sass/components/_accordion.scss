@@ -1,0 +1,105 @@
+.accordion {
+  padding: 34px 41px;
+  border: 1px solid $border-color;
+  border-radius: 20px;
+  max-width: 332px;
+  width: 100%;
+  font-weight: 700;
+
+  @include media-tablet {
+    margin: 0 auto;
+  }
+
+  &__item {
+    position: relative;
+    background-color: $main-bg-color;
+    padding: 12px 20px 12px 40px;
+    max-width: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.4s, background-color 0.4s;
+
+    &:hover {
+      background-color: #D6E7D2;
+    }
+
+    &.active {
+      .accordion__collapse {
+        display: block;
+        overflow: visible;
+        margin-top: 7px;
+      }
+
+      &:after {
+        transform: rotate(-180deg);
+        background-color: #AEA1A1;
+        background-image: url('../images/arrow-wh.svg');
+        
+      }
+
+      &.accordion__item {
+        background-color: #D6E7D2;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 40px;
+      top: 18px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #D9D9D9;
+      background-image: url('../images/arrow.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 6px 4px;
+    }
+  }
+
+  &__trigger {
+    display: block;
+  }
+
+  &__text {
+    border-top: 0.5px solid #AEA1A1;
+    @include font(10px, 1, 300);
+    font-size: 10px;
+    font-weight: 300;
+    color: $text-color;
+    padding-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  &__price {
+    @include font(12px, 1.67, 700);
+    margin-bottom: 15px;
+  }
+  
+  &__cost {
+    color: $aсcent-title-color;
+  }
+
+  &__time {
+    font-weight: 400;
+  }
+
+  &__order {
+    color: $text-color;
+    @include font(14px, 1.43, 700);
+    background-color: $light;
+    padding: 3px 20px;
+    border-radius: 10px;
+  }
+
+  &__collapse {
+    display: none;
+    overflow: hidden;
+  }
+}

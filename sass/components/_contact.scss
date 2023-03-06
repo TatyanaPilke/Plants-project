@@ -1,0 +1,37 @@
+.contacts {
+  padding-top: 60px;
+
+  &__title {
+    font-weight: 700;
+    width: fit-content;
+    margin: 0 auto 37px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    padding-bottom: 352px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 400px;
+    width: 100%;
+    height: 497px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
